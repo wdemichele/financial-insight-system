@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hypothesis Testing - Financial Insights Q&A</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div class="position-sticky pt-3">
+            <div
+              class="px-3 mb-4 d-flex justify-content-between align-items-center"
+            >
+              <h5 class="mb-0">Financial Insights</h5>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="darkModeSwitch"
+                />
+                <label class="form-check-label" for="darkModeSwitch">
+                  <i class="bi bi-moon"></i>
+                </label>
+              </div>
+            </div>
+
+            <div class="px-3">
+              <div class="nav flex-column">
+                <a href="/" class="nav-link link-dark">
+                  <i class="bi bi-chat-text me-2"></i>Q&A Interface
+                </a>
+                <a href="/datasets" class="nav-link link-dark">
+                  <i class="bi bi-database me-2"></i>Dataset Management
+                </a>
+                <a href="/hypothesis" class="nav-link active">
+                  <i class="bi bi-lightbulb me-2"></i>Hypothesis Testing
+                </a>
+                <a href="/conversations" class="nav-link link-dark">
+                  <i class="bi bi-chat-square-text me-2"></i>Conversations
+                </a>
+                <a href="/settings" class="nav-link link-dark">
+                  <i class="bi bi-gear me-2"></i>Settings
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">Hypothesis Testing</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-primary"
+                  id="generate-btn"
+                >
+                  <i class="bi bi-lightbulb"></i> Generate Hypotheses
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  id="reset-btn"
+                >
+                  <i class="bi bi-arrow-repeat"></i> Reset
+                </button>
+                <a href="/" class="btn btn-sm btn-outline-secondary">
+                  <i class="bi bi-chat-text"></i> Back to Q&A
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dataset Info -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <span>Current Dataset</span>
+                  <a href="/datasets" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-database"></i> Change Dataset
+                  </a>
+                </div>
+                <div class="card-body">
+                  <div id="dataset-info">
+                    <div class="d-flex justify-content-center my-4">
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Generated Hypotheses -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div class="card-header">Generated Hypotheses</div>
+                <div class="card-body">
+                  <div id="hypotheses-container">
+                    <div id="no-hypotheses" class="text-center py-5">
+                      <i class="bi bi-lightbulb fs-1 text-muted"></i>
+                      <p class="mt-3 text-muted">
+                        No hypotheses generated yet. Click the "Generate
+                        Hypotheses" button to start.
+                      </p>
+                    </div>
+                    <div id="hypotheses-list" style="display: none">
+                      <!-- Hypotheses will be displayed here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hypothesis Testing Results -->
+          <div
+            class="row mb-4"
+            id="testing-results-container"
+            style="display: none"
+          >
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div class="card-header">Hypothesis Testing Results</div>
+                <div class="card-body">
+                  <div id="testing-results">
+                    <!-- Test results will be displayed here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Insights -->
+          <div class="row mb-4" id="insights-container" style="display: none">
+            <div class="col-12">
+              <div class="card shadow-sm">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <span>Synthesized Insights</span>
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    id="export-insights-btn"
+                  >
+                    <i class="bi bi-download"></i> Export Insights
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div id="insights-content">
+                    <!-- Synthesized insights will be displayed here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Testing confirmation modal -->
+    <div
+      class="modal fade"
+      id="test-confirm-modal"
+      tabindex="-1"
+      aria-labelledby="test-confirm-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="test-confirm-modal-label">
+              Confirm Hypothesis Testing
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Are you sure you want to test the selected hypothesis? This may
+              take some time.
+            </p>
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i> The system will analyze the
+              data to verify or refute this hypothesis.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="test-confirm-btn">
+              Test Hypothesis
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Export format modal -->
+    <div
+      class="modal fade"
+      id="export-modal"
+      tabindex="-1"
+      aria-labelledby="export-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="export-modal-label">Export Insights</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="export-form">
+              <div class="mb-3">
+                <label for="export-format" class="form-label"
+                  >Export Format:</label
+                >
+                <select class="form-select" id="export-format">
+                  <option value="json">JSON</option>
+                  <option value="markdown">Markdown</option>
+                  <option value="html">HTML</option>
+                  <option value="txt">Text</option>
+                  <option value="pdf">PDF</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="export-confirm-btn"
+            >
+              Export
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="d-none">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="text-light mt-3" id="loading-message">Processing...</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/hypothesis.js') }}"></script>
+  </body>
+</html>

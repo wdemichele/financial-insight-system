@@ -1,0 +1,261 @@
+{
+  "row_count": 700,
+  "column_count": 16,
+  "columns": [
+    "Segment",
+    "Country",
+    "Product",
+    "Discount Band",
+    "Units Sold",
+    "Manufacturing Price",
+    "Sale Price",
+    "Gross Sales",
+    "Discounts",
+    "Sales",
+    "COGS",
+    "Profit",
+    "Date",
+    "Month Number",
+    "Month Name",
+    "Year"
+  ],
+  "missing_values": {
+    "Segment": 0,
+    "Country": 0,
+    "Product": 0,
+    "Discount Band": 53,
+    "Units Sold": 0,
+    "Manufacturing Price": 0,
+    "Sale Price": 0,
+    "Gross Sales": 0,
+    "Discounts": 0,
+    "Sales": 0,
+    "COGS": 0,
+    "Profit": 0,
+    "Date": 0,
+    "Month Number": 0,
+    "Month Name": 0,
+    "Year": 0
+  },
+  "total_sales": 118726350.25999999,
+  "total_profit": 16893702.259999998,
+  "overall_profit_margin": 14.229109395685386,
+  "segment_analysis": [
+    {
+      "Segment": "Channel Partners",
+      "Sales": 1800593.64,
+      "Profit": 1316803.14,
+      "Units Sold": 161263.5,
+      "Profit Margin": 73.13161119462801
+    },
+    {
+      "Segment": "Enterprise",
+      "Sales": 19611694.375,
+      "Profit": -614545.625,
+      "Units Sold": 168552.0,
+      "Profit Margin": -3.1335672137711454
+    },
+    {
+      "Segment": "Government",
+      "Sales": 52504260.67,
+      "Profit": 11388173.17,
+      "Units Sold": 470673.5,
+      "Profit Margin": 21.6899981538203
+    },
+    {
+      "Segment": "Midmarket",
+      "Sales": 2381883.075,
+      "Profit": 660103.075,
+      "Units Sold": 172178.0,
+      "Profit Margin": 27.713496179907988
+    },
+    {
+      "Segment": "Small Business",
+      "Sales": 42427918.5,
+      "Profit": 4143168.5,
+      "Units Sold": 153139.0,
+      "Profit Margin": 9.765193878177172
+    }
+  ],
+  "country_analysis": [
+    {
+      "Country": "Canada",
+      "Sales": 24887654.885,
+      "Profit": 3529228.885,
+      "Units Sold": 247428.5,
+      "Profit Margin": 14.18064056781459
+    },
+    {
+      "Country": "France",
+      "Sales": 24354172.28,
+      "Profit": 3781020.78,
+      "Units Sold": 240931.0,
+      "Profit Margin": 15.52514590325465
+    },
+    {
+      "Country": "Germany",
+      "Sales": 23505340.82,
+      "Profit": 3680388.82,
+      "Units Sold": 201494.0,
+      "Profit Margin": 15.657670519154804
+    },
+    {
+      "Country": "Mexico",
+      "Sales": 20949352.11,
+      "Profit": 2907523.11,
+      "Units Sold": 203325.0,
+      "Profit Margin": 13.878821143170905
+    },
+    {
+      "Country": "United States of America",
+      "Sales": 25029830.165,
+      "Profit": 2995540.665,
+      "Units Sold": 232627.5,
+      "Profit Margin": 11.96788250360867
+    }
+  ],
+  "product_analysis": [
+    {
+      "Product": "Amarilla",
+      "Sales": 17747116.06,
+      "Profit": 2814104.06,
+      "Units Sold": 155315.0,
+      "Profit Margin": 15.856683702782975
+    },
+    {
+      "Product": "Carretera",
+      "Sales": 13815307.885,
+      "Profit": 1826804.885,
+      "Units Sold": 146846.0,
+      "Profit Margin": 13.22304866606308
+    },
+    {
+      "Product": "Montana",
+      "Sales": 15390801.88,
+      "Profit": 2114754.88,
+      "Units Sold": 154198.0,
+      "Profit Margin": 13.740381407599536
+    },
+    {
+      "Product": "Paseo",
+      "Sales": 33011143.95,
+      "Profit": 4797437.95,
+      "Units Sold": 338239.5,
+      "Profit Margin": 14.532783102780055
+    },
+    {
+      "Product": "VTT",
+      "Sales": 20511921.02,
+      "Profit": 3034608.02,
+      "Units Sold": 168783.0,
+      "Profit Margin": 14.794362834378738
+    },
+    {
+      "Product": "Velo",
+      "Sales": 18250059.465,
+      "Profit": 2305992.465,
+      "Units Sold": 162424.5,
+      "Profit Margin": 12.635533979614898
+    }
+  ],
+  "discount_analysis": [
+    {
+      "Discount Band": "High",
+      "Sales": 37372486.725,
+      "Profit": 3388866.725,
+      "Discounts": 21702.148061224492,
+      "Units Sold": 398085.5,
+      "Profit Margin": 9.067811703129316
+    },
+    {
+      "Discount Band": "Low",
+      "Sales": 34629778.7,
+      "Profit": 6188857.7,
+      "Discounts": 5535.47375,
+      "Units Sold": 261858.5,
+      "Profit Margin": 17.871490758328175
+    },
+    {
+      "Discount Band": "Medium",
+      "Sales": 38780430.835,
+      "Profit": 5579522.835,
+      "Discounts": 12407.21555785124,
+      "Units Sold": 379698.5,
+      "Profit Margin": 14.387469955502366
+    }
+  ],
+  "monthly_analysis": [
+    {
+      "Month Name": "January",
+      "Sales": 6607761.68,
+      "Profit": 814028.6799999999,
+      "Units Sold": 67835.5
+    },
+    {
+      "Month Name": "February",
+      "Sales": 7297531.39,
+      "Profit": 1148547.39,
+      "Units Sold": 55115.0
+    },
+    {
+      "Month Name": "March",
+      "Sales": 5586859.87,
+      "Profit": 669866.87,
+      "Units Sold": 53420.0
+    },
+    {
+      "Month Name": "April",
+      "Sales": 6964775.07,
+      "Profit": 929984.57,
+      "Units Sold": 78886.5
+    },
+    {
+      "Month Name": "May",
+      "Sales": 6210211.06,
+      "Profit": 828640.0599999999,
+      "Units Sold": 51771.0
+    },
+    {
+      "Month Name": "June",
+      "Sales": 9518893.82,
+      "Profit": 1473753.82,
+      "Units Sold": 103302.0
+    },
+    {
+      "Month Name": "July",
+      "Sales": 8102920.18,
+      "Profit": 923865.6799999999,
+      "Units Sold": 69349.0
+    },
+    {
+      "Month Name": "August",
+      "Sales": 5864622.42,
+      "Profit": 791066.4199999999,
+      "Units Sold": 60705.0
+    },
+    {
+      "Month Name": "September",
+      "Sales": 10882697.27,
+      "Profit": 1786735.27,
+      "Units Sold": 107881.0
+    },
+    {
+      "Month Name": "October",
+      "Sales": 21671431.02,
+      "Profit": 3439781.02,
+      "Units Sold": 201104.0
+    },
+    {
+      "Month Name": "November",
+      "Sales": 12651417.5,
+      "Profit": 1370102.5,
+      "Units Sold": 121131.0
+    },
+    {
+      "Month Name": "December",
+      "Sales": 17367228.98,
+      "Profit": 2717329.98,
+      "Units Sold": 155306.0
+    }
+  ]
+}
