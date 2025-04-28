@@ -1,0 +1,95 @@
+HYPOTHESIS:
+Hypothesis: 3: The USA Market has Higher Costs Leading to Lower Profit Margins
+
+**
+
+RESULT:
+### Hypothesis Testing: The USA Market has Higher Costs Leading to Lower Profit Margins
+
+#### 1. Break Down the Hypothesis into Testable Components
+- **Component 1:** The USA market has higher costs.
+- **Component 2:** Higher costs in the USA market lead to lower profit margins.
+
+#### 2. Identify Specific Data to Analyze
+- **Sales and Profit Data:** To calculate profit margins.
+- **COGS (Cost of Goods Sold):** To determine the cost structure.
+- **Comparison Metrics:** Compare the USA market with other countries.
+
+#### 3. Perform Necessary Calculations and Comparisons
+
+**Step 1: Calculate Profit Margins for the USA and Other Countries**
+- **Profit Margin Formula:** \( \text{Profit Margin} = \left( \frac{\text{Profit}}{\text{Sales}} \right) \times 100 \)
+
+**USA Market:**
+- Sales: $25,029,830.165
+- Profit: $2,995,540.665
+- Profit Margin: \( \left( \frac{2,995,540.665}{25,029,830.165} \right) \times 100 = 11.97\% \)
+
+**Other Countries:**
+- **Canada:**
+  - Sales: $24,887,654.885
+  - Profit: $3,529,228.885
+  - Profit Margin: \( \left( \frac{3,529,228.885}{24,887,654.885} \right) \times 100 = 14.18\% \)
+- **France:**
+  - Sales: $24,354,172.28
+  - Profit: $3,781,020.78
+  - Profit Margin: \( \left( \frac{3,781,020.78}{24,354,172.28} \right) \times 100 = 15.53\% \)
+- **Germany:**
+  - Sales: $23,505,340.82
+  - Profit: $3,680,388.82
+  - Profit Margin: \( \left( \frac{3,680,388.82}{23,505,340.82} \right) \times 100 = 15.66\% \)
+- **Mexico:**
+  - Sales: $20,949,352.11
+  - Profit: $2,907,523.11
+  - Profit Margin: \( \left( \frac{2,907,523.11}{20,949,352.11} \right) \times 100 = 13.88\% \)
+
+**Step 2: Compare COGS (Cost of Goods Sold)**
+- **COGS Formula:** \( \text{COGS} = \text{Sales} - \text{Profit} \)
+
+**USA Market:**
+- Sales: $25,029,830.165
+- Profit: $2,995,540.665
+- COGS: \( 25,029,830.165 - 2,995,540.665 = 22,034,289.5 \)
+
+**Other Countries:**
+- **Canada:**
+  - Sales: $24,887,654.885
+  - Profit: $3,529,228.885
+  - COGS: \( 24,887,654.885 - 3,529,228.885 = 21,358,426 \)
+- **France:**
+  - Sales: $24,354,172.28
+  - Profit: $3,781,020.78
+  - COGS: \( 24,354,172.28 - 3,781,020.78 = 20,573,151.5 \)
+- **Germany:**
+  - Sales: $23,505,340.82
+  - Profit: $3,680,388.82
+  - COGS: \( 23,505,340.82 - 3,680,388.82 = 19,824,952 \)
+- **Mexico:**
+  - Sales: $20,949,352.11
+  - Profit: $2,907,523.11
+  - COGS: \( 20,949,352.11 - 2,907,523.11 = 18,041,829 \)
+
+#### 4. Determine Whether the Data Supports, Refutes, or is Inconclusive about the Hypothesis
+
+**Findings:**
+- The USA market has a lower profit margin (11.97%) compared to Canada (14.18%), France (15.53%), Germany (15.66%), and Mexico (13.88%).
+- The COGS in the USA ($22,034,289.5) is higher than in Canada ($21,358,426), France ($20,573,151.5), Germany ($19,824,952), and Mexico ($18,041,829).
+
+**Conclusion:**
+- The data supports the hypothesis that the USA market has higher costs leading to lower profit margins. The USA has the lowest profit margin among the countries analyzed and the highest COGS.
+
+#### 5. Numerical Evidence for Conclusion
+- **USA Profit Margin:** 11.97%
+- **Other Countries Profit Margins:** Canada (14.18%), France (15.53%), Germany (15.66%), Mexico (13.88%)
+- **USA COGS:** $22,034,289.5
+- **Other Countries COGS:** Canada ($21,358,426), France ($20,573,151.5), Germany ($19,824,952), Mexico ($18,041,829)
+
+#### 6. Limitations in Testing Approach
+- The analysis is based on aggregate data and does not account for potential variations within segments or products.
+- The dataset does not provide detailed cost breakdowns, which could offer more insights into specific cost drivers.
+- The analysis assumes that all other factors (e.g., market conditions, operational efficiencies) are constant across countries, which may not be the case.
+
+### Actionable Insights
+- Investigate specific cost drivers in the USA market to identify areas for cost reduction.
+- Consider strategies to improve operational efficiencies in the USA to enhance profit margins.
+- Conduct a more granular analysis of segments and products within the USA market to identify high-cost areas.
